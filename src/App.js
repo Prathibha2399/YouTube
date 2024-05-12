@@ -23,7 +23,7 @@ export default App;
       Body
         * Sidebar
             -MenuItems
-        *MainContainer
+        * MainContainer
             -ButtonsList
             -VideoContainer
                 --VideoCard
