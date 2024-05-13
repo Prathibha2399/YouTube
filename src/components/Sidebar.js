@@ -1,8 +1,13 @@
 import React from "react";
-import MenuItems from "./MenuItems";
+import { useSelector } from "react-redux";
 
 
 const Sidebar = () => {
+
+    const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
+    if(!isMenuOpen) return null;   /// Early return
+
     return (
         <div className = "p-5 w-48 shadow-lg">
             <div className = "pb-[10%] pt-[5%]">

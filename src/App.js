@@ -3,14 +3,18 @@ import React from "react";
 
 import Head from "./components/Head.js";
 import Body from "./components/Body.js";
+import store from "./utils/store.js";
+import {Provider} from "react-redux";
 
 
 function App() {
   return (
-    <div className = "">
-      <Head />
-      <Body />
-    </div>
+    <Provider store = {store} >
+      <div className = "">
+        <Head />
+        <Body />
+      </div>
+    </Provider>
   );
 }
 

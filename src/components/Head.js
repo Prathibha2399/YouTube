@@ -1,12 +1,23 @@
 import React from "react";
 import search_logo from "../utils/assets/search.svg";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
 
 
 const Head = () => {
+
+    const dispatch = useDispatch();
+    
+    const toggleMenuHandler = () => {
+        dispatch(toggleMenu());
+    };
+    
+    
+    
     return(
         <div className = "grid grid-flow-col p-2 m-2 shadow-md">
             <div className = "flex gap-4 col-span-2"> 
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOvIaGkcc-iALkAPYRD-SxkqggLTaLMYqqNjsGr8MhCDEaLe-LST3ujdH1xIgumMR4cM&usqp=CAU" alt="hamberger_img" className="h-8"/>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdOvIaGkcc-iALkAPYRD-SxkqggLTaLMYqqNjsGr8MhCDEaLe-LST3ujdH1xIgumMR4cM&usqp=CAU" alt="hamberger_img" className="h-8 cursor-pointer" onClick = {()=> toggleMenuHandler()}/>
 
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4TdQa9xvFpj9ZPBKS2HlJauJZyVzqOuUI8ROCBMAX&s" alt="logo" className="h-8" />
                 
