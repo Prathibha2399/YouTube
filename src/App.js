@@ -28,7 +28,8 @@ export default App;
         * Sidebar
             -MenuItems
         * MainContainer
-            -ButtonsList
-            -VideoContainer
+            -ButtonsList (Top)
+                --ButtonComponents
+            -VideoContainer (Playable Videos)
                 --VideoCard
       */}
